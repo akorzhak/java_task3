@@ -1,5 +1,5 @@
 /*
- * EnumGroups
+ * Groups
  *
  * Description: This source file is a part of Java game program,
  * that generates a random integer. Then prompts a user to guess
