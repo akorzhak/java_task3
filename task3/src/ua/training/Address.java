@@ -1,15 +1,14 @@
 /*
  * Address
  *
- * Description: This source file is a part of Java game program,
- * that generates a random integer. Then prompts a user to guess
- * the value by giving certain hints and guides.
+ * Description: This source file is a part of Java program,
+ * that records data input from the command line.
  * 
  * By: Alyona Korzhakova 
  *
  * Created: 2018/03/07
  * 
- * Updated: 2018/03/07
+ * Updated: 2018/03/08
  */
 package ua.training;
 
