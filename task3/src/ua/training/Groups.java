@@ -14,5 +14,5 @@
 package ua.training;
 
 public enum Groups {
-	GROUP1, GROUP2, GROUP3, GROUP4
+    GROUP1, GROUP2, GROUP3, GROUP4
 }

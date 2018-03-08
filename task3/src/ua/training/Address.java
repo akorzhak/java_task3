@@ -14,12 +14,12 @@
 package ua.training;
 
 public class Address {
-	
-	private String index;
-	private String city;
-	private String street;
-	private String numberHouse;
-	private String numberFlat;
+    
+    private String index;
+    private String city;
+    private String street;
+    private String numberHouse;
+    private String numberFlat;
 
     public void setIndex(String index) {
         this.index = index;

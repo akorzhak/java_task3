@@ -17,33 +17,33 @@ import java.util.Scanner;
 import java.time.LocalDate;
 
 public class Controller {
-	private Model model;
-	private View view;
-	private Person person;
-	private Address address;
-	private int retry;
+    private Model model;
+    private View view;
+    private Person person;
+    private Address address;
+    private int retry;
 
-	//Constructor
-	public Controller(Model model, View view, Person person, Address address) {
-		this.model = model;
-		this.view = view;
-		this.person = person;
-		this.address = address;
-	}
+    //Constructor
+    public Controller(Model model, View view, Person person, Address address) {
+        this.model = model;
+        this.view = view;
+        this.person = person;
+        this.address = address;
+    }
 
-	//Work method
-	public void processUser() {
+    //Work method
+    public void processUser() {
 
-		Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-		inputLastName(sc);
-		inputFirstName(sc);
-		inputSecondName(sc);
-		inputShortName(sc);
-		inputNickname(sc);
-		inputComment(sc);
-		inputGroups(sc);
-		inputHomePhoneNumber(sc);
+        inputLastName(sc);
+        inputFirstName(sc);
+        inputSecondName(sc);
+        inputShortName(sc);
+        inputNickname(sc);
+        inputComment(sc);
+        inputGroups(sc);
+        inputHomePhoneNumber(sc);
         inputMobilePhoneNumber(sc);
         inputMobilePhoneNumber2(sc);
         inputEmail(sc);
@@ -59,75 +59,75 @@ public class Controller {
         inputCreationDate(sc);
         setChangeDate();
         addPersonToDataBase();
-	}
+    }
 
-	private void inputLastName(Scanner sc) {
+    private void inputLastName(Scanner sc) {
 
-		view.printMessage(View.LAST_NAME);
-		person.setLastName(sc.nextLine());
-		while (!person.getLastName().matches("^[A-Z]{1}[a-z]+")) {
-			view.printMessage(View.WRONG_INPUT_DATA);
-			view.printMessage(View.LAST_NAME);
-			person.setLastName(sc.nextLine());
-		}
-	}
+        view.printMessage(View.LAST_NAME);
+        person.setLastName(sc.nextLine());
+        while (!person.getLastName().matches("^[A-Z]{1}[a-z]+")) {
+            view.printMessage(View.WRONG_INPUT_DATA);
+            view.printMessage(View.LAST_NAME);
+            person.setLastName(sc.nextLine());
+        }
+    }
 
-	private void inputFirstName(Scanner sc) {
+    private void inputFirstName(Scanner sc) {
 
-		view.printMessage(View.FIRST_NAME);
-		person.setFirstName(sc.nextLine());
-		while (!person.getFirstName().matches("^[A-Z]{1}[a-z]+")) {
-			view.printMessage(View.WRONG_INPUT_DATA);
-			view.printMessage(View.FIRST_NAME);
-			person.setFirstName(sc.nextLine());
-		}
-	}
+        view.printMessage(View.FIRST_NAME);
+        person.setFirstName(sc.nextLine());
+        while (!person.getFirstName().matches("^[A-Z]{1}[a-z]+")) {
+            view.printMessage(View.WRONG_INPUT_DATA);
+            view.printMessage(View.FIRST_NAME);
+            person.setFirstName(sc.nextLine());
+        }
+    }
 
-	private void inputSecondName(Scanner sc) {
+    private void inputSecondName(Scanner sc) {
 
-		view.printMessage(View.SECOND_NAME);
-		person.setSecondName(sc.nextLine());
-		while (!person.getSecondName().matches("^[A-Z]{1}[a-z]+")) {
-			view.printMessage(View.WRONG_INPUT_DATA);
-			view.printMessage(View.SECOND_NAME);
-			person.setSecondName(sc.nextLine());
-		}
-	}
+        view.printMessage(View.SECOND_NAME);
+        person.setSecondName(sc.nextLine());
+        while (!person.getSecondName().matches("^[A-Z]{1}[a-z]+")) {
+            view.printMessage(View.WRONG_INPUT_DATA);
+            view.printMessage(View.SECOND_NAME);
+            person.setSecondName(sc.nextLine());
+        }
+    }
 
-	private void inputShortName(Scanner sc) {
+    private void inputShortName(Scanner sc) {
 
-		view.printMessage(View.SHORT_NAME);
-		person.setShortName(sc.nextLine());
-		while (!person.getShortName().matches("^[A-Z]{1}[a-z]+\\s[A-Z]{1}\\.")) {
-			view.printMessage(View.WRONG_INPUT_DATA);
-			view.printMessage(View.SHORT_NAME);
-			person.setShortName(sc.nextLine());
-		}
-	}
+        view.printMessage(View.SHORT_NAME);
+        person.setShortName(sc.nextLine());
+        while (!person.getShortName().matches("^[A-Z]{1}[a-z]+\\s[A-Z]{1}\\.")) {
+            view.printMessage(View.WRONG_INPUT_DATA);
+            view.printMessage(View.SHORT_NAME);
+            person.setShortName(sc.nextLine());
+        }
+    }
 
-	private void inputNickname(Scanner sc) {
+    private void inputNickname(Scanner sc) {
 
-		view.printMessage(View.NICKNAME);
-		person.setNickname(sc.nextLine());
-		while (!person.getNickname().matches("^[^\\d_][a-z\\d_]{4,10}")) {
-			view.printMessage(View.WRONG_INPUT_DATA);
-			view.printMessage(View.NICKNAME);
-			person.setNickname(sc.nextLine());
-		}
-	}
+        view.printMessage(View.NICKNAME);
+        person.setNickname(sc.nextLine());
+        while (!person.getNickname().matches("^[^\\d_][a-z\\d_]{4,10}")) {
+            view.printMessage(View.WRONG_INPUT_DATA);
+            view.printMessage(View.NICKNAME);
+            person.setNickname(sc.nextLine());
+        }
+    }
 
-	private void inputComment(Scanner sc) {
+    private void inputComment(Scanner sc) {
 
-		view.printMessage(View.COMMENT);
-		person.setComment(sc.nextLine());
-		while (!person.getComment().matches(".*")) {
-			view.printMessage(View.WRONG_INPUT_DATA);
-			view.printMessage(View.COMMENT);
-			person.setComment(sc.nextLine());
-		}
-	}
+        view.printMessage(View.COMMENT);
+        person.setComment(sc.nextLine());
+        while (!person.getComment().matches(".*")) {
+            view.printMessage(View.WRONG_INPUT_DATA);
+            view.printMessage(View.COMMENT);
+            person.setComment(sc.nextLine());
+        }
+    }
 
-	private void inputGroups(Scanner sc) {
+    private void inputGroups(Scanner sc) {
 
         view.printMessage(View.GROUPS);
         String groups = sc.nextLine();
@@ -266,17 +266,19 @@ public class Controller {
     }
 
     private void composeFullAddress() {
-	    person.setFullAddress("index: " + address.getIndex() + "\ncity: " + address.getCity()
-                + "\nstreet: " + address.getStreet() + "\nhouse number: " + address.getNumberHouse()
+        person.setFullAddress("index: " + address.getIndex() + "\ncity: " 
+                + address.getCity() + "\nstreet: " + address.getStreet()
+                + "\nhouse number: " + address.getNumberHouse()
                 + "\nflat number: " + address.getNumberFlat());
-	    view.printMessage("Your address:\n" + person.getFullAddress());
+        view.printMessage("Your address:\n" + person.getFullAddress());
     }
 
     private void inputCreationDate(Scanner sc) {
 
         view.printMessage(View.CREATED);
         person.setCreated(sc.nextLine());
-        while (!person.getCreated().matches( "20[0-9]{2}-[01]{1}[0-9]{1}-[0-3]{1}[0-9]{1}")) {
+        while (!person.getCreated().matches( "20[0-9]{2}-[01]{1}[0-9]"
+                                           + "{1}-[0-3]{1}[0-9]{1}")) {
             view.printMessage(View.WRONG_INPUT_DATA);
             view.printMessage(View.CREATED);
             person.setCreated(sc.nextLine());
@@ -287,7 +289,7 @@ public class Controller {
 
         person.setUpdated(LocalDate.now());
         view.printMessage(View.UPDATED + person.getUpdated());
-	}
+    }
 
     private void addPersonToDataBase() {
 
@@ -295,4 +297,3 @@ public class Controller {
         view.printMessage(View.DATA_BASE);
     }
 }
-

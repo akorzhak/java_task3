@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class Model {
 
-	ArrayList<Person> dataBase = new ArrayList<Person>();
+    ArrayList<Person> dataBase = new ArrayList<Person>();
 
     public void setDataBase(Person person) {
         dataBase.add(person);
